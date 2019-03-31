@@ -1,4 +1,5 @@
-CC=movcc
+DIR := ${CURDIR}
+CC=docker run --rm --name movcc -v ${DIR}:/app movcc:latest movcc
 CFLAGS=-s -lncurses
 
 EXAMPLES=\

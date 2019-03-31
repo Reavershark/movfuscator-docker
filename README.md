@@ -19,6 +19,19 @@
 
 ```
 
+## Docker
+To build the image run:
+```
+docker build . -t movcc
+```
+
+To run movcc use docker run, mounting the working dir to /app:
+```
+docker run --rm --name movcc -v $(pwd):/app -it movcc:latest movcc app.c -o app
+```
+
+The Makefile in [validation](validation/) has also been updated to use the docker image.
+
 ## Overview
 
 The M/o/Vfuscator (short 'o', sounds like "mobfuscator") compiles programs into
